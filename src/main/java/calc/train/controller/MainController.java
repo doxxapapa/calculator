@@ -47,7 +47,7 @@ public class MainController {
         model.addAttribute("result", CalculateSimple.divide(cal));
         return "calculator";
     }
-    //clear
+    //négyzet
     @RequestMapping(value="/calculator", params="power", method = RequestMethod.POST)
     public String power(@ModelAttribute("cal")  Calculator cal, Model model ){
         model.addAttribute("result",  CalculateSimple.power(cal));

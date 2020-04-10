@@ -3,13 +3,52 @@
 
 <head>
 <style>
+    .indezit{
+        position: relative;
+        float: left;
+    }
+    .indezit2{
+        position: relative;
+        bottom: 43px;
+        left: -5px;
+        margin-left: 50%;
+        margin-right: 50%;
+        background-color: black;
+        visibility: visible;
+
+    }
+    .equals{
+        position: relative;
+        left: 1.25%;
+        bottom:-10px;
+        right:0% ;
+        top: 0% ;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        margin-left: 50%;
+        margin-right: 50%;
+
+
+    }
+    .buttons{
+        position: relative;
+        top: 20%;
+    }
 body {
+    width: 1024px;
+    height: 1024px;
   background-color: #41b3a3;
 }
 
 h1 {
   color: white;
   text-align: center;
+
+}
+CUSTOM {
+    color: white;
+    text-align: center;
+    margin-top: 100px;
 }
 
 p {
@@ -18,10 +57,10 @@ p {
   font-size: 20px;
 }
 form{
-text-align: center;
+text-align: left;
 }
 .button{
-background-color: #512a57;
+    background-color: #FF6347;
   border: #000000;
   border-width: 60px;
   color: white;
@@ -37,9 +76,10 @@ background-color: #512a57;
 font-size: 15px;
 padding: 15px 15px 15px;
 }
+
 </style>
 <meta charset="UTF-8">
-<title>Unicorns calculator</title>
+<title>Spring Calculator</title>
 
 </head>
 <body>
@@ -47,8 +87,19 @@ padding: 15px 15px 15px;
 
 <h1>Calculator:</h1>
 <form action="#" th:action="@{/calculator}" th:object="${cal}" method="POST">
-    <input class="in" type="text" th:field="*{operandL}"/>
-    <input class="in" type="text" th:field="*{operandR}"/>
+    <div class="indezit">
+        <input class="in" type="text" th:field="*{operandL}"/>
+        <input class="in" type="text" style="margin-left: 50px" th:field="*{operandR}"/>
+    </div>
+    <div class="equals">
+        <p>=</p>
+    </div>
+    <div class="indezit2">
+
+        <input class="in" type="text" style="margin-left: 50px" th:value="${result}" readonly/>
+    </div>
+
+    <div class = "buttons">
     <p>
         <input type="submit" class="button" name="add" value="+"/>
         <input type="submit" class="button" name="subtract" value="-"/>
@@ -57,7 +108,8 @@ padding: 15px 15px 15px;
         <input type="submit" class="button" name="power" value="^"/>
         <input type="submit" class="button" name="clearSimple" value="C"/>
     </p>
-     <h1><p th:text="'Eredmény: ' + ${result}"/></h1>
+    </div>
+
 </form>
 
 </body>
