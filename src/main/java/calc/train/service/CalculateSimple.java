@@ -11,7 +11,8 @@ public class CalculateSimple {
     }
 
     public double subtract(Calculator model){
-        return (model.getOperandL() - model.getOperandR());
+
+	    return (model.getOperandL() - model.getOperandR());
     }
 
     public double multiply(Calculator model){
@@ -19,14 +20,15 @@ public class CalculateSimple {
     }
 
     public double divide(Calculator model){
+
         if(model.getOperandL() == 0) return 0;
         if(model.getOperandR() == 0) return 0;
-        return (double) model.getOperandL() / model.getOperandR();
+        return model.getOperandL() / model.getOperandR();
     }
     public double power(Calculator model){
         if(model.getOperandL() == 0) return 0;
         if(model.getOperandR() == 0) return 1;
-        return (int) Math.pow(model.getOperandL(),model.getOperandR());
+        return  Math.pow(model.getOperandL(),model.getOperandR());
     }
 
 

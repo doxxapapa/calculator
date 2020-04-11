@@ -48,30 +48,7 @@ public class Calculator {
     @Getter
     */
     
-	 public double calculateResult() {
-	        double result = 0;
-	        switch(this.operator) {
-	            case "+":
-	                result = this.operandL + this.operandR;
-	                break;
-	            case "-":
-	                result = this.operandL - this.operandR;
-	                break;
-	            case "*":
-	                result = this.operandL * this.operandR;
-	                break;
-	            case "/":
-	                result = this.operandL / this.operandR;
-	                break;
-	            case "^":
-	                result = Math.pow(this.operandL,this.operandR);
-	                break;
-	            default:
-	                    result = 0;
-	        }
 
-	        return result;
-	    }
   
     
     

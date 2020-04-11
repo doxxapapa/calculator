@@ -17,6 +17,13 @@
         visibility: visible;
 
     }
+    .operator{
+        position: relative;
+        left: 24%;
+        top: -23%;
+        margin-right: 120%;
+        background-color: black;
+    }
     .equals{
         position: relative;
         left: 1.25%;
@@ -32,7 +39,7 @@
     }
     .buttons{
         position: relative;
-        top: 20%;
+        top: -2%;
     }
 body {
     width: 1024px;
@@ -94,6 +101,7 @@ padding: 15px 15px 15px;
     <div class="equals">
         <p>=</p>
     </div>
+
     <div class="indezit2">
 
         <input class="in" type="text" style="margin-left: 50px" th:value="${result}" readonly/>
@@ -101,8 +109,8 @@ padding: 15px 15px 15px;
 
     <div class = "buttons">
     <p>
-        <input type="submit" class="button" name="add" value="+"/>
-        <input type="submit" class="button" name="subtract" value="-"/>
+        <input type="submit" class="button" name="add" value="+" />
+        <input type="submit" class="button" name="subtract" value="-" />
         <input type="submit" class="button" name="multiply" value="*"/>
         <input type="submit" class="button" name="divide" value="/"/>
         <input type="submit" class="button" name="power" value="^"/>
